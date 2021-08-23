@@ -1,0 +1,29 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body{
+    margin: 0;
+  }
+  
+  .counter{
+    margin: 0 auto;
+    width: 350px;
+    border: 1px solid darkblue;
+    padding: 1em;
+    margin-top: 1em;
+  }
+  
+  h2{
+    text-align: center;
+  }
+  
+   button{
+     margin-right: 1em;
+   }
+  
+   .left-right{
+     display: flex;
+     justify-content: space-evenly;
+   }
+  
