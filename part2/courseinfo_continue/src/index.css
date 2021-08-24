@@ -1,0 +1,23 @@
+* {
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+  font-size: 16px;
+  font-family: Verdana, sans-serif;
+  font-weight: 100;
+}
+
+.container{
+  padding-left: 1em ;
+}
+
+.container h1{
+  font-family: Impact, sans-serif;
+  letter-spacing: 1px;
+}
+
+.total-exercises{
+  font-weight: bold;
+}
