@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+*{
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+  background-color: rgba(245, 245, 245, 0.931) ;
+}
+
+header{
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+  margin: 1em auto;
+}
+
+.subtitle{
+  font-size: .85rem;
+  text-align: center;
+  letter-spacing: 1px;
+  margin-top: 2em;
+}
+
+.container{
+  max-width: 900px;
+  width: 100%;
+  color: #111;
+  margin: 0 auto;
+}
+
+.main{
+  width: 100%;
+  display: grid;
+  grid-template-columns: 35% 60%;
+  gap: 1em;
+}
+
+/* Form  */
+.new-contact{
+  border-right: 1px solid rgb(177, 176, 176);
+  padding: .5em;
+}
+.new-contact > h3 {
+  font-weight: 400;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  margin-top: 0;
+}
+input, 
+button{
+  width: 100%;
+  font-size: 1rem;
+  font-family: 'Roboto', sans-serif;
+  margin: .5em auto;
+}
+
+input{
+  padding: .3em .3em;
+}
+
+input:focus{
+  outline: none;
+}
+
+button{
+  text-transform: uppercase;
+  font-size: .85rem;
+  padding: .5em .2em;
+
+}
+/* Display list of contacts */
+#table-contact-list{
+  width: 100%;
+  text-align: left;
+  padding-top: .5em;
+}
+
+
+#table-contact-list th,
+#table-contact-list td{
+  border-bottom: 1px solid #ddd;
+  padding: .5em;
+}
+
+#table-contact-list tr:nth-child(even){background-color: #f2f2f2;}
+
+#table-contact-list tr:hover {background-color: #ddd;}
+
+.left{
+  text-align: left;
+}
+
+.number-of-contacts{
+  background-color: #ddd ;
+  padding: .2em .5em;
+  border-radius: 5px;
+  margin: .2em .2em;
+  text-align: center;
+}
