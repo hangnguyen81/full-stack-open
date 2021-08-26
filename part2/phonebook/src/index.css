@@ -42,7 +42,7 @@ header{
 
 /* Form  */
 .new-contact{
-  border-right: 1px solid rgb(177, 176, 176);
+  /* border-right: 1px solid rgb(177, 176, 176); */
   padding: .5em;
 }
 .new-contact > h3 {
