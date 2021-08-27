@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+/* Color theme
+Green Leaf: #39603D
+Brown Grey: #3C403D
+Tanly: #DADED4
+White: #FFFFFF
+*/
+*{
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  background-color: #DADED4;
+  color: #3C403D
+}
+
+/* Page layout */
+.page-container{
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1em;
+}
+header{
+  margin-bottom: 2em;
+}
+header > h1 {
+  color: #39603D;
+  text-shadow: 1px 1px 1px #3c403d1a ;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 0;
+}
+
+.small-title{
+  font-size: .725rem;
+  text-align: center;
+  margin-top: 0;
+}
+
+.footer{
+  margin-top: 2em;
+}
+
+/* Search bar */
+.search-query{
+  width: 100%;
+  font-size: 1rem;
+  font-style: italic;
+  font-family: 'Montserrat', sans-serif;
+  padding: .2em .2em;
+}
+
+input:focus{
+  outline: none;
+}
+
+/* Display search result - list of countries or a single one */
+.detail-country{
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: .5em;
+  align-content: start;
+}
+
+.detail-country img{
+  width: 200px;
+}
+.detail-country p{
+  margin-top: 0;
+  margin-bottom: .5em;
+}
+
+
+button{
+  padding: .2em .5em;
+}
+
+.weather img {
+  width: 100px;
+}
