@@ -105,10 +105,18 @@ button{
 }
 
 /* Misc */
-.message{
+.success,
+.error{
   font-size: 1rem;
   font-style: italic;
   font-weight: 700;
-  color: darkgreen;
+
   margin-bottom: 1em;
+}
+.success{  
+  color: darkgreen;
+}
+
+.error{
+  color: red
 }

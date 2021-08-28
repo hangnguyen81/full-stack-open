@@ -11,7 +11,7 @@ function App() {
   const [firstName, setFirstName] = useState('')
   const [lastName, setLastName] = useState('')
   const [number, setNumber] = useState('')
-  const [message, setMessage] = useState(null)
+  const [notification, setNotification] = useState(null)
 
   useEffect(() =>{
     contactsService
@@ -40,6 +40,11 @@ function App() {
     setNumber('') 
   }
 
+  const notifyText = (message,type='success') =>{
+    setNotification({ message, type })
+    setTimeout(() => {setNotification(null)}, 3000)
+  }
+
   const addContact = (event) =>{
     event.preventDefault()
     //if no input data, alert then no adding to contacts array
@@ -62,8 +67,7 @@ function App() {
             const updatedContacts = contacts.map(contact => contact.id !== id? contact : returnedContact)
             setContacts(updatedContacts)
             setDisplayContacts(updatedContacts)   
-            setMessage(`The new phone number of ${returnedContact.firstName} ${returnedContact.lastName} is updated`)  
-            setTimeout(() =>{setMessage(null)},3000)  
+            notifyText(`The new phone number of ${returnedContact.firstName} ${returnedContact.lastName} is updated`)  
         })
       }
         resetForm()
@@ -75,8 +79,7 @@ function App() {
           const newContacts = contacts.concat(returnedContact)
           setContacts(newContacts)
           setDisplayContacts(newContacts)
-          setMessage(`${returnedContact.firstName} ${returnedContact.lastName} is added to phonebook`)
-          setTimeout(() =>{setMessage(null)},3000)
+          notifyText(`${returnedContact.firstName} ${returnedContact.lastName} is added to phonebook`)
         })
         resetForm()  
     }
@@ -88,8 +91,7 @@ function App() {
         .deleteContact(id)
         .catch(error =>{
           const DeletedContact = contacts.find(contact => contact.id === id)
-          setMessage(`Information of ${DeletedContact.firstName} ${DeletedContact.lastName} has already been removed from server`)
-          setTimeout(() =>{setMessage(null)},3000)
+          notifyText(`Information of ${DeletedContact.firstName} ${DeletedContact.lastName} has already been removed from server`,'error')
         })
       const afterDeleteContacts = contacts.filter(contact => contact.id !== id)
       setContacts(afterDeleteContacts)
@@ -113,7 +115,7 @@ function App() {
         }
         <div className = 'contact-list'>
           {<SearchBar onChange={searchContact}/> }
-          <Notification message = {message} />
+          <Notification notification = {notification} />
           <table id='table-contact-list'>
             <tbody>
               <tr>
