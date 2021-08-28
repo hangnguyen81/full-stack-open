@@ -56,11 +56,12 @@ button{
   width: 100%;
   font-size: 1rem;
   font-family: 'Roboto', sans-serif;
-  margin: .5em auto;
+  margin: 0 auto;
 }
 
 input{
   padding: .3em .3em;
+  margin-bottom: .5em;
 }
 
 input:focus{
@@ -70,14 +71,14 @@ input:focus{
 button{
   text-transform: uppercase;
   font-size: .85rem;
-  padding: .5em .2em;
+  padding: .2em .2em;
 
 }
 /* Display list of contacts */
 #table-contact-list{
   width: 100%;
   text-align: left;
-  padding-top: .5em;
+  padding-top: .2em;
 }
 
 
@@ -101,4 +102,13 @@ button{
   border-radius: 5px;
   margin: .2em .2em;
   text-align: center;
+}
+
+/* Misc */
+.message{
+  font-size: 1rem;
+  font-style: italic;
+  font-weight: 700;
+  color: darkgreen;
+  margin-bottom: 1em;
 }
