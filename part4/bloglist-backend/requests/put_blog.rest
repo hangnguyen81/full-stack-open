@@ -1,0 +1,8 @@
+PUT http://localhost:3003/api/blogs/61a67c0666e10d0c3a95c532
+Content-Type: application/json
+
+{ 
+    "author": "Hanna Kaijanaho",
+    "url": "https://hang.kaijanaho.fi/?p=75",
+    "likes": 9
+}

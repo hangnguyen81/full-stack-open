@@ -1,0 +1,11 @@
+POST http://localhost:3003/api/blogs
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImhhbmciLCJpZCI6IjYxYjI3OWQzMThkODFkYzU5YWNhZWE0NCIsImlhdCI6MTYzOTE0MjcwNSwiZXhwIjoxNjM5MTQ2MzA1fQ.slZGJC92bwzAgLS1jRwyHW6oJA2WKTNbCj_WonUHoCw
+
+{ 
+    "title":"Xmas is here",
+    "author": "Ville Koronen",
+    "url": "https://hang.kaijanaho.fi/?p=75",
+    "likes": 23,
+    "userId":"61b279d318d81dc59acaea44"
+}
