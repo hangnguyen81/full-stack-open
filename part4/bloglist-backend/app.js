@@ -11,7 +11,7 @@ const usersRouter = require('./controllers/users');
 const loginRouter = require('./controllers/login');
 const mongoose = require('mongoose');
 
-logger.info('connecting to', config.MONGO_DB_URI);
+logger.info('connecting to MongoDB');
 
 mongoose.connect(config.MONGO_DB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => {logger.info('connected to MongoDB');})
@@ -21,7 +21,9 @@ app.use(cors());
 //app.use(express.static('build'));
 app.use(express.json());
 app.use(middleware.requestLogger);
-app.use('/api/blogs', middleware.tokenExtractor, blogsRouter);
+app.use(middleware.tokenExtractor);
+app.use(middleware.userExtractor);
+app.use('/api/blogs', blogsRouter);
 app.use('/api/users', usersRouter);
 app.use('/api/login', loginRouter);
 
