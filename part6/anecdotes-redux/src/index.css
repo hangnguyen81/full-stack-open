@@ -1,0 +1,61 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+  font-size: 16px;
+  font-family: Georgia, sans-serif;
+  background-color: rgb(170, 199, 253);
+}
+
+.container{
+  max-width: 900px;
+  width: 100%;
+  margin: 1em auto;
+  background-color: whitesmoke;
+  box-shadow: 1px 1px 5px #000;
+  border-radius: .5em;
+  padding: 1em;
+}
+
+h2{
+  text-transform: uppercase;
+  text-align: center;
+}
+
+p{
+  line-height: 1.6;
+}
+
+.anecdote-card{
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+.anecdote-sub {
+  color: #333;
+  padding-left: 1rem;
+}
+
+.anecdotes-actions{
+  display: flex;
+  justify-content: center;
+}
+
+button{
+  padding: .3em 1em;
+  margin-top: .5em;
+  margin-left: 1rem;
+}
+
+.anecdote-input {
+  width: 100%;
+  padding: .3em 1em;
+  margin-top: .5em;
+}
+
+.anecdote-input:focus,
+.anecdote-input.hover{
+  outline: none;
+}
